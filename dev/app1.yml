@@ -17,14 +17,14 @@ spec:
       nodeSelector:
         nodepool: resume
       containers:
-      - name: nginx
+      - name: resume
         image: kayitesimarieange3h/resume-update:10
         ports:
         - containerPort: 5001
-      - name : httpd
-        image: httpd
+      - name: nginx-proxy   #sidecar container is for a help container
+        image: nginx:latest
         ports:
-        - containerPort: 8080 #sidecar container is for a help container
+        - containerPort: 8080
 ---    
 apiVersion: v1
 kind: Service
@@ -40,3 +40,10 @@ spec:
     - name: http
       port: 80
       targetPort: 5001
+
+
+
+
+
+
+
