@@ -34,6 +34,6 @@ spec:
   selector:
     app: resume
   ports:
-    - name: http
+    - name: resume
       port: 80
       targetPort: 5001
