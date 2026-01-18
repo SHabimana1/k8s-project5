@@ -21,10 +21,10 @@ spec:
         image: kayitesimarieange3h/resume-update:10
         ports:
         - containerPort: 5001
-      - name : nginx
+      - name : httpd
         image: httpd
         ports:
-        - containerPort: 80 #sidecar container is for a help container
+        - containerPort: 8080 #sidecar container is for a help container
 ---    
 apiVersion: v1
 kind: Service
