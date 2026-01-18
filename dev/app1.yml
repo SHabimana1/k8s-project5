@@ -22,9 +22,9 @@ spec:
         ports:
         - containerPort: 5001
       - name : nginx
-        image: nginx-proxy
+        image: httpd
         ports:
-        - containerPort: 8080 #sidecar container is for a help container
+        - containerPort: 80 #sidecar container is for a help container
 ---    
 apiVersion: v1
 kind: Service
