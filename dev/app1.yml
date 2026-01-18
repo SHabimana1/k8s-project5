@@ -15,14 +15,13 @@ spec:
         app: resume
     spec:
       nodeSelector:
-       nodepool: resume
+        nodepool: resume
       containers:
       - name: nginx
-        image: shabimana1/cv
+        image: kayitesimarieange3h/resume-update:10
         ports:
         - containerPort: 5001
-
----
+---    
 apiVersion: v1
 kind: Service
 metadata:
@@ -34,6 +33,6 @@ spec:
   selector:
     app: resume
   ports:
-    - name: resume
+    - name: http
       port: 80
       targetPort: 5001
